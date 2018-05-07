@@ -2,5 +2,5 @@ import React from 'react';
 
 export const Home = () =>
   <div>
-    Welcome to WineFinder!
+    <h1>Welcome to WineFinder!</h1>
   </div>
