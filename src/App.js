@@ -13,7 +13,7 @@ const store = createStore(
 class App extends Component {
   render() {
     return (
-      <Provider>
+      <Provider store={store}>
         <div className="App">
           Placeholder
         </div>
