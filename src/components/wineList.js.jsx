@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
-class WineList extends Component {
+const WineList = ( {winesData} ) => {
+  
+  const wines = winesData.map((wine) => {
+    return <li>wine.print</li>
+  });
 
-  render() {
-    return (
-      <div>
-      </div>
-    )
-  }
+  return (
+    <div>
+      {wines}
+    </div>
+  )
 }
 
 export default WineList;
