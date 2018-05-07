@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import { rootReducer } from './reducers/index';
 import logo from './logo.svg';
 import './App.css';
 
