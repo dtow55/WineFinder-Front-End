@@ -22,19 +22,19 @@ export const Navbar = () =>
       }}
     >Home</NavLink>
     <NavLink
-      to="/about"
+      to="/wines"
       exact
       style={link}
       activeStyle={{
         background: 'darkblue'
       }}
-    >About</NavLink>
+    >Wines</NavLink>
     <NavLink
-      to="/login"
+      to="/stores"
       exact
       style={link}
       activeStyle={{
         background: 'darkblue'
       }}
-    >Login</NavLink>
+    >Stores</NavLink>
   </div>;
