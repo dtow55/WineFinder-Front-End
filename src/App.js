@@ -6,9 +6,11 @@ import { Navbar } from './components/navbar.js.jsx';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navbar/>
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar/>
+        </div>
+      </Router>
     );
   }
 }
