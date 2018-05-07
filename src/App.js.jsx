@@ -3,6 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import { Navbar } from './components/navbar.js.jsx';
 import { Home } from './components/home.js.jsx';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class App extends Component {
   render() {
@@ -16,5 +18,17 @@ class App extends Component {
     );
   }
 }
+
+const mapStateToProps = () => {
+  return {
+
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+
+  }, dispatch);
+};
 
 export default App;
