@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 
 class WineList extends Component {
-
-
   /*
   const wines = winesData.map((wine) => {
     return <li>wine.print</li>
   });
   */
   render() {
-    console.log(this);
+    console.log(this.props.wineData);
     return (
       <div>
 

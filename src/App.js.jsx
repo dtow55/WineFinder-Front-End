@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   render() {
-    let david = this.props.wineData
     return (
       <Router>
         <div className="App">
@@ -23,7 +22,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route 
             exact path="/wines" 
-            render={(david) => <WineList wineData={david}/>} 
+            render={() => <WineList wineData={this.props.wineData}/>} 
           />
         </div>
       </Router>
@@ -43,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
   }, dispatch);
 };
 
-export default App;
+export default connect(mapStateToProps)(App);
