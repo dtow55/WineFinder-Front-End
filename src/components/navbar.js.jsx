@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Navbar, Nav, NavItem, MenuItem } from 'react-bootstrap';
 
 const link = {
   width: '100px',
@@ -10,8 +11,23 @@ const link = {
   color: 'white',
 }
  
-export const Navbar = () =>
+export const NavBar = () =>
   <div>
+    <Navbar>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="#home">React-Bootstrap</a>
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav>
+        <NavItem eventKey={1} href="#">
+          Link
+        </NavItem>
+        <NavItem eventKey={2} href="#">
+          Link
+        </NavItem>
+      </Nav>
+    </Navbar>;
     <NavLink
       to="/"
       exact
