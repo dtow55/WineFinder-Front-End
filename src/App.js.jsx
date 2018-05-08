@@ -22,7 +22,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route 
             exact path="/wines" 
-            render={() => <WineList wineData={this.props.wineData}/>} 
+            render={() => <WineList winesData={this.props.winesData}/>} 
           />
         </div>
       </Router>
@@ -32,7 +32,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    wineData: state.wines
+    winesData: state.wines
   }
 };
 
