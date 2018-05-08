@@ -6,6 +6,7 @@ import './App.css';
 import { Navbar } from './components/navbar.js.jsx';
 import { Home } from './components/home.js.jsx';
 import WineList from './components/wineList.js.jsx';
+import StoreList from './components/storeList.js.jsx';
 
 
 class App extends Component {
@@ -24,6 +25,10 @@ class App extends Component {
             exact path="/wines" 
             render={() => <WineList winesData={this.props.winesData}/>} 
           />
+          <Route 
+            exact path="/stores" 
+            render={() => <StoreList storesData={this.props.storesData}/>} 
+          />
         </div>
       </Router>
     );
@@ -32,7 +37,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    winesData: state.wines
+    winesData: state.wines, 
+    storesData: state.stores
   }
 };
 
