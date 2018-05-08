@@ -4,7 +4,7 @@ class StoreList extends Component {
   render() {
 
     const stores = this.props.storesData.map((store) => {
-      return <li>{store.print}</li>
+      return <li>{store.name}<br/>{store.address}</li>
     });
 
     return (
