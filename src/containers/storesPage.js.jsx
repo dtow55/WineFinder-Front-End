@@ -8,6 +8,7 @@ class StoresPage extends Component {
 
   componentDidMount() {
     this.props.loadStores();
+    console.log(this.props.stores);
   }
 
   render() {
@@ -25,7 +26,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    loadstores: loadstores
+    loadStores: loadStores
   }, dispatch);
 };
 
