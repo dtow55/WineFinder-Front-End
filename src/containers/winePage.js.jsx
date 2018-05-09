@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loadWines } from './actions/actions';
-import WineList from './components/wineList.js.jsx';
+import { loadWines } from '../actions/actions';
+import WineList from '../components/wineList.js.jsx';
 
 class WinePage extends Component {
 
@@ -11,7 +11,9 @@ class WinePage extends Component {
   }
 
   render() {
-    <WineList wines = {this.props.wines}/>
+    return (
+      <WineList wines = {this.props.wines}/>
+    )
   }
 }
 
@@ -27,4 +29,4 @@ const mapDispatchToProps = (dispatch) => {
   }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(WinePage);

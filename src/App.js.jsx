@@ -7,6 +7,7 @@ import { NavBar } from './components/navbar.js.jsx';
 import { Home } from './components/home.js.jsx';
 import { loadWines } from './actions/actions';
 import WineList from './components/wineList.js.jsx';
+import WinePage from './containers/winePage.js.jsx';
 import StoreList from './components/storeList.js.jsx';
 
 
@@ -24,7 +25,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route 
             exact path="/wines" 
-            render={() => <WineList winesData={this.props.winesData}/>} 
+            component={WinePage} 
           />
           <Route 
             exact path="/stores" 
