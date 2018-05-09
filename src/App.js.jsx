@@ -23,10 +23,7 @@ class App extends Component {
         <div>
           <NavBar/>
           <Route exact path="/" component={Home} />
-          <Route 
-            exact path="/wines" 
-            component={WinePage} 
-          />
+          <Route exact path="/wines" component={WinePage} />
           <Route 
             exact path="/stores" 
             render={() => <StoreList storesData={this.props.storesData}/>} 
