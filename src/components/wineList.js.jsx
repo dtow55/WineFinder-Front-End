@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Wine from './wine.js.jsx';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class WineList extends Component {
   render() {
