@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Wine from './wine.js.jsx'
 
 class WineList extends Component {
   render() {
 
     const wines = this.props.wines.map((wine, index) => {
-      return <li key={index}>{wine.print}</li>
+      return <Wine key={index} wine={wine} />
     });
 
     return (
