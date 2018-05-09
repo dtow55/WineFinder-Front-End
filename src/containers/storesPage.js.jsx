@@ -8,7 +8,6 @@ class StoresPage extends Component {
 
   componentDidMount() {
     this.props.loadStores();
-    console.log(this.props.stores);
   }
 
   render() {
