@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loadWines } from '../actions/actions';
 import WineList from '../components/wineList.js.jsx';
+import WineForm from '../components/wineForm.js.jsx';
 
 class WinesPage extends Component {
 
@@ -14,6 +15,10 @@ class WinesPage extends Component {
     return (
       <div>
         <WineList wines = {this.props.wines}/>
+        <br/>
+        <h3>List a New Wine: </h3>
+        <WineForm />
+        <br/>
       </div>
     )
   }
