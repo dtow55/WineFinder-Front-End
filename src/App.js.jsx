@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import './App.css';
 import { NavBar } from './components/navbar.js.jsx';
 import { Home } from './components/home.js.jsx';
+import { loadWines } from './actions/actions';
 import WineList from './components/wineList.js.jsx';
 import StoreList from './components/storeList.js.jsx';
 
@@ -12,7 +13,7 @@ import StoreList from './components/storeList.js.jsx';
 class App extends Component {
 
   componentDidMount() {
-
+    this.props.loadWines();
   }
 
   render() {
@@ -44,8 +45,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-
+    loadWines: loadWines
   }, dispatch);
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

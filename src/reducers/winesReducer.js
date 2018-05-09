@@ -1,9 +1,9 @@
 import { wines } from './wines'
 
-export default function winesReducer(state = wines, action) {
+export default function winesReducer(state = [], action) {
   switch (action.type) {
     case 'FETCH_WINES':
-      return ;
+      return action.wines;
     default: 
       return state;
   }
