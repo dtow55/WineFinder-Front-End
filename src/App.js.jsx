@@ -13,10 +13,6 @@ import WineShow from './components/wineShow.js.jsx'
 
 class App extends Component {
 
-  componentDidMount() {
-    this.props.loadWines();
-  }
-
   render() {
     return (
       <Router>
@@ -32,17 +28,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    winesData: state.wines, 
-    storesData: state.stores
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    loadWines: loadWines
-  }, dispatch);
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
