@@ -13,11 +13,9 @@ class WinesPage extends Component {
   render() {
     console.log(`${this.props.match.url}/:wineId`);
     return (
-      <Router>
       <div>
         <WineList wines = {this.props.wines}/>
       </div>
-      </Router>
     )
   }
 }
