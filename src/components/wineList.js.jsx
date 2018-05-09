@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class WineList extends Component {
   render() {
 
-    const wines = this.props.winesData.map((wine) => {
-      return <li>{wine.print}</li>
+    const wines = this.props.winesData.map((wine, index) => {
+      return <li key={index}>{wine.print}</li>
     });
 
     return (
