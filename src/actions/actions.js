@@ -24,3 +24,12 @@ export function loadWine(wineId) {
       .then(wine => dispatch({ type: 'FETCH_WINE', wine: wine }));
   }
 }
+
+export function loadStore(storeId) {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_STORE' });
+    return fetch(`http://localhost:4000/stores/${storeId}.json`)
+      .then(response => response.json())
+      .then(store => dispatch({ type: 'FETCH_STORE', stores: store }));
+  }
+}
