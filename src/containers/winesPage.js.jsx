@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { loadWines } from '../actions/actions';
 import WineList from '../components/wineList.js.jsx';
 
-class WinePage extends Component {
+class WinesPage extends Component {
 
   componentDidMount() {
     this.props.loadWines();
@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch) => {
   }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(WinePage);
+export default connect(mapStateToProps, mapDispatchToProps)(WinesPage);
