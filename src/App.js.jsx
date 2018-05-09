@@ -8,6 +8,7 @@ import { Home } from './components/home.js.jsx';
 import { loadWines } from './actions/actions';
 import WinesPage from './containers/winesPage.js.jsx';
 import StoresPage from './containers/storesPage.js.jsx';
+import WineShow from './components/wineShow.js.jsx'
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/wines" component={WinesPage} />
           <Route exact path="/stores" component={StoresPage} />
+          <Route path="/wines/:wineId" component={WineShow} />
         </div>
       </Router>
     );
