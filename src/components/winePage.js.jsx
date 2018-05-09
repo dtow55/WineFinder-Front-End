@@ -5,7 +5,8 @@ class WineShow extends Component {
   render() {
     return (
       <div>
-        test
+        <h3>{this.props.wine.name}</h3>
+        <strong>Type: </strong>
       </div>
     )
   }
@@ -13,6 +14,7 @@ class WineShow extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const wine = state.wines.find(wine => wine.id == ownProps.match.params.wineId);
+  console.log(ownProps.match.params);
   if (wine) {
     return { wine: wine };
   } else {
