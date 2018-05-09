@@ -9,11 +9,16 @@ class WinePage extends Component {
     this.props.loadWine(this.props.wineId);
   }
 
-  render() {
+  render(props) {
+    const wine = this.props.wine;
+
     return (
       <div>
-        <h3>{this.props.wine.name}</h3>
-        <strong>Type: </strong>{this.props.wine.color}
+        <h3>{wine.name}</h3>
+        <strong>Type: </strong>{wine.color}<br/>
+        <strong>Varietal: </strong>{wine.grape}<br/>
+        <strong>Price: </strong>{wine.price}<br/>
+        <strong>Description: </strong>{wine.description}<br/>
       </div>
     )
   }
