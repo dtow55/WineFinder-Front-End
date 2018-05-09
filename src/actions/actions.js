@@ -15,13 +15,3 @@ export function loadStores() {
       .then(stores => dispatch({ type: 'FETCH_STORES', stores: stores }));
   }
 }
-
-export function loadWine(wineId) {
-  return (dispatch) => {
-    dispatch({ type: 'LOADING_WINE' });
-    return fetch(`http://localhost:4000/wines/${wineId}.json`)
-      .then(response => response.json())
-      .then(wine => dispatch({ type: 'FETCH_WINE', wine: wine }));
-  }
-}
-
