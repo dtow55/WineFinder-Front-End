@@ -1,5 +1,3 @@
-import { wines } from './wines'
-
 export default function winesReducer(state = [], action) {
   switch (action.type) {
     case 'FETCH_WINES':
