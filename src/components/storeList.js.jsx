@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class StoreList extends Component {
   render() {
 
-    const stores = this.props.storesData.map((store) => {
+    const stores = this.props.stores.map((store) => {
       return <li>{store.name}<br/>{store.address}</li>
     });
 
