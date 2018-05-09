@@ -10,15 +10,9 @@ import { rootReducer } from './reducers/index';
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk)//, 
-  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunk)
 );
-/*
-const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-*/
 
 ReactDOM.render(
   <Provider store={store}>
