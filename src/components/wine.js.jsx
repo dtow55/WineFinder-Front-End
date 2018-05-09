@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Wine = ({ wine }) => {
   return (
-    <Router>
-      <div>
-        <Route exact path="/" render={() => 'yes'} />
-      </div>
-    </Router>
+    <div>
+      <Link to='/'>{wine.print}</Link>
+    </div>
   )
 }
 
