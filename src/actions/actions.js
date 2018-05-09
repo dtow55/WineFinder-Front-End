@@ -30,6 +30,6 @@ export function loadStore(storeId) {
     dispatch({ type: 'LOADING_STORE' });
     return fetch(`http://localhost:4000/stores/${storeId}.json`)
       .then(response => response.json())
-      .then(store => dispatch({ type: 'FETCH_STORE', stores: store }));
+      .then(store => dispatch({ type: 'FETCH_STORE', store: store }));
   }
 }
