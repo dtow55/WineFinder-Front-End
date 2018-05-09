@@ -9,6 +9,7 @@ import { loadWines } from './actions/actions';
 import WinesPage from './containers/winesPage.js.jsx';
 import StoresPage from './containers/storesPage.js.jsx';
 import WinePage from './components/winePage.js.jsx'
+import StorePage from './components/storePage.js.jsx'
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route exact path="/wines" component={WinesPage} />
           <Route exact path="/stores" component={StoresPage} />
           <Route exact path="/wines/:wineId" component={WinePage} />
+          <Route exact path="/stores/:storeId" component={StorePage} />
         </div>
       </Router>
     );
