@@ -13,10 +13,11 @@ class WinesPage extends Component {
   }
 
   render() {
+    console.log(`${this.props.match.url}/:wineId`);
     return (
       <div>
         <WineList wines = {this.props.wines}/>
-        <Route exact path={`${this.props.match.url}/:wineId`} component={wineShow} />
+        <Route path={`${this.props.match.url}/:wineId`} component={wineShow} />
       </div>
     )
   }
