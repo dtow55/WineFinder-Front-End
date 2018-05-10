@@ -13,15 +13,20 @@ export const WineInfo = ({ wine }) => {
 }
 
 export const WineComments = ({ comments }) => {
-  console.log(comments);
-  /*
-  const commentsHTML = comments.map((comment, index) => {
-    return <p>comment.content</p>
-  });
-  */
-  return (
-    <div>
-    {/*commentsHTML*/}
-    </div>
-  )
+  
+  if (comments) {
+    
+    const commentsHTML = comments.map((comment, index) => {
+      return <p>{comment.content}</p>
+    });
+    
+    return (
+      <div>
+      {commentsHTML}
+      </div>
+    )
+    
+  } else {
+    return null;
+  }
 }

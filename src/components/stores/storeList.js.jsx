@@ -4,17 +4,21 @@ import Store from './store.js.jsx';
 
 class StoreList extends Component {
   render() {
-    console.log(this.props)
-    /*
-    const stores = this.props.stores.map((store, index) => {
-      return <Store key={index} store={store} />
-    });
-    */
-    return (
-      <ListGroup>
-        {/*stores*/}
-      </ListGroup>
-    )
+    if (this.props.stores) {
+
+      const stores = this.props.stores.map((store, index) => {
+        return <Store key={index} store={store} />
+      });
+      
+      return (
+        <ListGroup>
+          {stores}
+        </ListGroup>
+      )
+
+    } else {
+      return null;
+    }
   }
 }
 
