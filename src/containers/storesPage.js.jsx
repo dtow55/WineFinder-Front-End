@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { PageHeader } from 'react-bootstrap';
 import { loadStores } from '../actions/actions';
 import StoreList from '../components/stores/storeList.js.jsx';
 
@@ -12,7 +13,12 @@ class StoresPage extends Component {
 
   render() {
     return (
-      <StoreList stores = {this.props.stores}/>
+      <div>
+        <PageHeader>
+          Stores
+        </PageHeader>
+        <StoreList stores = {this.props.stores}/>
+      </div>
     )
   }
 }
