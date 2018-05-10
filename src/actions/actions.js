@@ -1,3 +1,4 @@
+//Loads the index of all wines in JSON format from backend API
 export function loadWines() {
   return (dispatch) => {
     dispatch({ type: 'LOADING_WINES' });
@@ -7,6 +8,7 @@ export function loadWines() {
   }
 }
 
+//Loads the index of all stores in JSON format from backend API
 export function loadStores() {
   return (dispatch) => {
     dispatch({ type: 'LOADING_STORES' });
@@ -16,6 +18,7 @@ export function loadStores() {
   }
 }
 
+//Loads data on a particular wine in JSON format from backend API
 export function loadWine(wineId) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_WINE' });
@@ -25,6 +28,7 @@ export function loadWine(wineId) {
   }
 }
 
+//Loads data on a particular store in JSON format from backend API
 export function loadStore(storeId) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_STORE' });
