@@ -21,12 +21,9 @@ class WineForm extends Component {
 
   onSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(this.state);
-    console.log(JSON.stringify(this.state));
-    
-    fetch(`http://localhost:4000/wines`, {body: JSON.stringify(this.state), method: 'POST'})
+
+    fetch(`http://localhost:4000/wines`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({wine: this.state})})
       .then(response => console.log(response));
-    
   }
 
   render() {
