@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ListGroup } from 'react-bootstrap';
 import Wine from './wine.js.jsx';
 
 class WineList extends Component {
@@ -9,9 +10,9 @@ class WineList extends Component {
     });
 
     return (
-      <div>
+      <ListGroup>
         {wines}
-      </div>
+      </ListGroup>
     )
   }
 }
