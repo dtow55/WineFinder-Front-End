@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loadWine } from '../actions/actions'
-import { WineInfo } from '../components/wines/winePageComponents.js.jsx';
+import { WineInfo, WineComments } from '../components/wines/winePageComponents.js.jsx';
 import StoreList from '../components/stores/storeList.js.jsx';
 
 class WinePage extends Component {
@@ -20,6 +20,7 @@ class WinePage extends Component {
 
         <div id="wine-comments">
           <h3>Comments: </h3>
+          <WineComments comments={wine.comments}/>
         </div>
 
         <div id="wine-stores">

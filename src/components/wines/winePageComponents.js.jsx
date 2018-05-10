@@ -11,3 +11,17 @@ export const WineInfo = ({ wine }) => {
   </div>
   )
 }
+
+export const WineComments = ({ comments }) => {
+  console.log(comments);
+  /*
+  const commentsHTML = comments.map((comment, index) => {
+    return <p>comment.content</p>
+  });
+  */
+  return (
+    <div>
+    {/*commentsHTML*/}
+    </div>
+  )
+}
