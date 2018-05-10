@@ -17,7 +17,7 @@ export const WineComments = ({ comments }) => {
   if (comments) {
     
     const commentsHTML = comments.map((comment, index) => {
-      return <li>{comment.content}</li>
+      return <li>"{comment.content}"</li>
     });
     
     return (
