@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loadStore } from '../actions/actions';
 import { StoreInfo } from '../components/stores/storePageComponents.js.jsx';
+import WineList from '../components/wines/wineList.js.jsx';
 
 class StorePage extends Component {
 
@@ -16,6 +17,9 @@ class StorePage extends Component {
     return (
       <div>
         <StoreInfo store={store} />
+
+        <h3>Wines at this Store: </h3>
+          <WineList wines={store.wines} />
       </div>
     )
   }
