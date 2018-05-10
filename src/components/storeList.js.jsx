@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ListGroup } from 'react-bootstrap';
 import Store from './store.js.jsx';
 
 class StoreList extends Component {
@@ -9,9 +10,9 @@ class StoreList extends Component {
     });
 
     return (
-      <div>
+      <ListGroup>
         {stores}
-      </div>
+      </ListGroup>
     )
   }
 }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { ListGroupItem } from 'react-bootstrap';
 
 const Store = ({ store }) => {
   return (
-    <div>
-      <Link to={`/stores/${store.id}`}>{store.name}</Link>
-    </div>
+    <ListGroupItem header={store.name} href={`/stores/${store.id}`} > 
+      {store.address}
+    </ListGroupItem>
   )
 }
 
