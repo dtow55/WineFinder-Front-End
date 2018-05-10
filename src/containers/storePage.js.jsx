@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loadStore } from '../actions/actions';
+import { StoreInfo } from '../components/stores/storePageComponents.js.jsx';
 
 class StorePage extends Component {
 
@@ -14,7 +15,7 @@ class StorePage extends Component {
 
     return (
       <div>
-        <h3>{store.name}</h3>
+        <StoreInfo store={store} />
       </div>
     )
   }
