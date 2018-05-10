@@ -9,8 +9,8 @@ import { Home } from './components/home.js.jsx';
 import { loadWines } from './actions/actions';
 import WinesPage from './containers/winesPage.js.jsx';
 import StoresPage from './containers/storesPage.js.jsx';
-import WinePage from './components/winePage.js.jsx'
-import StorePage from './components/storePage.js.jsx'
+import WinePage from './containers/winePage.js.jsx'
+import StorePage from './containers/storePage.js.jsx'
 
 
 class App extends Component {

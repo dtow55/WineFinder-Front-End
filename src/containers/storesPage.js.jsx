@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loadStores } from '../actions/actions';
-import StoreList from '../components/storeList.js.jsx';
+import StoreList from '../components/stores/storeList.js.jsx';
 
 class StoresPage extends Component {
 
