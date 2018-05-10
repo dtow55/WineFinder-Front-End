@@ -8,18 +8,20 @@ class WineForm extends Component {
       name: "", 
       color: "", 
       grape: "", 
-      price: 0.00, 
+      price: "", 
       description: ""
     }
   }
 
-  onChangeHandler(event) {
+  onChangeHandler = (event) => {
+    console.log(this.state);
     this.setState({
-      
+      [event.target.name]: event.target.value
     });
   }
 
-  onSubmitHandler(event) {
+  onSubmitHandler = (event) => {
+    event.preventDefault();
 
   }
 
@@ -27,11 +29,11 @@ class WineForm extends Component {
     return (
       <div>
         <form id="wine-form">
-          Name <input type="text" name="wine[grape]" value={this.state.name} /><br/>
-          Type <input type="text" name="wine[grape]" value={this.state.color} /><br/>
-          Varietal <input type="text" name="wine[grape]" value={this.state.grape} /><br/>
-          Price <input type="number" name="wine[grape]" value={this.state.price} /><br/>
-          Description <textarea name="wine[grape]" value={this.state.description} /><br/>
+          Name <input type="text" name="name" onChange={this.onChangeHandler} /><br/>
+          Type <input type="text" name="color" value={this.state.color} onChange={this.onChangeHandler} /><br/>
+          Varietal <input type="text" name="grape" value={this.state.grape} onChange={this.onChangeHandler} /><br/>
+          Price <input type="number" name="price" value={this.state.price} onChange={this.onChangeHandler} /><br/>
+          Description <textarea name="description" value={this.state.description} onChange={this.onChangeHandler} /><br/>
           <input type="submit" />
         </form>
       </div>
