@@ -14,11 +14,21 @@ class WinePage extends Component {
 
     return (
       <div>
-        <h3>{wine.name}</h3>
-        <strong>Type: </strong>{wine.color}<br/>
-        <strong>Varietal: </strong>{wine.grape}<br/>
-        <strong>Price: </strong>{wine.price}<br/>
-        <strong>Description: </strong>{wine.description}<br/>
+        <div id="wine-info">
+          <h3>{wine.name}</h3>
+          <strong>Type: </strong>{wine.color}<br/>
+          <strong>Varietal: </strong>{wine.grape}<br/>
+          <strong>Price: </strong>{wine.price}<br/>
+          <strong>Description: </strong>{wine.description}<br/>
+        </div>
+
+        <div id="wine-comments">
+          <h3>Comments: </h3>
+        </div>
+
+        <div id="wine-stores">
+          <h3>Stores Selling this Wine: </h3>
+        </div>
       </div>
     )
   }
