@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loadWine } from '../actions/actions';
+import { loadWine } from '../actions/actions'
+import { WineInfo } from '../components/wines/winePageComponents.js.jsx';
 
 class WinePage extends Component {
 
@@ -14,13 +15,7 @@ class WinePage extends Component {
 
     return (
       <div>
-        <div id="wine-info">
-          <h3>{wine.name}</h3>
-          <strong>Type: </strong>{wine.color}<br/>
-          <strong>Varietal: </strong>{wine.grape}<br/>
-          <strong>Price: </strong>{wine.price}<br/>
-          <strong>Description: </strong>{wine.description}<br/>
-        </div>
+        <WineInfo wine={wine}/>
 
         <div id="wine-comments">
           <h3>Comments: </h3>
