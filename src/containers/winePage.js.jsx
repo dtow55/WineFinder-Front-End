@@ -35,8 +35,7 @@ class WinePage extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  //debugger;
-  const wine = state.wines.find(wine => wine.id === ownProps.match.params.wineId)
+  const wine = state.wines.find((wine, index) => wine.id == ownProps.match.params.wineId)
 
   if (wine) {
     return { wine: wine } 
