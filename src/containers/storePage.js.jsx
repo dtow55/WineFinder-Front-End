@@ -8,8 +8,8 @@ import WineList from '../components/wines/wineList.js.jsx';
 class StorePage extends Component {
 
   componentDidMount() {
-    this.props.loadStore(this.props.storeId);
-    //this.props.loadWinesFromStore(this.props.store.wines);
+    //this.props.loadStore(this.props.storeId);
+    this.props.loadWinesFromStore(this.props.store.wines);
   }
 
   render(props) {
@@ -28,6 +28,7 @@ class StorePage extends Component {
   }
 }
 
+/*
 const mapStateToProps = (state, ownProps) => {
   return {
     storeId: ownProps.match.params.storeId, 
@@ -43,15 +44,15 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(StorePage);
+*/
 
-/*
 const mapStateToProps = (state, ownProps) => {
-  const wine = state.wines.find((wine, index) => wine.id == ownProps.match.params.wineId)
+  const store = state.stores.find((store, index) => store.id == ownProps.match.params.storeId)
 
-  if (wine) {
-    return { wine: wine } 
+  if (store) {
+    return { store: store } 
   } else {
-    return { wine: {} }
+    return { store: {} }
   }
 }
 
@@ -62,4 +63,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(StorePage);
-*/
