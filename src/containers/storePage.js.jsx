@@ -43,3 +43,23 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(StorePage);
+
+/*
+const mapStateToProps = (state, ownProps) => {
+  const wine = state.wines.find((wine, index) => wine.id == ownProps.match.params.wineId)
+
+  if (wine) {
+    return { wine: wine } 
+  } else {
+    return { wine: {} }
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    loadWinesFromStore: loadWinesFromStore
+  }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(StorePage);
+*/
