@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { ListGroupItem } from 'react-bootstrap';
 
 const Store = ({ store }) => {

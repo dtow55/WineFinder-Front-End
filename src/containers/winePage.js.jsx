@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { loadWine } from '../actions/actions'
+//import { bindActionCreators } from 'redux';
+//import { loadWine } from '../actions/actions'
 import { WineInfo, WineComments } from '../components/wines/winePageComponents.js.jsx';
 import StoreList from '../components/stores/storeList.js.jsx';
 
