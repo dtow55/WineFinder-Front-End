@@ -5,6 +5,13 @@ export function loadWinesFromStore(wines) {
   }
 } 
 
+//Currently unused
+export function loadStoresFromWine(stores) {
+  return (dispatch) => {
+    dispatch({ type: 'FETCH_STORES', stores: stores });
+  }
+} 
+
 // ***ASYNC ACTIONS***
 
 //Loads the index of all wines in JSON format from backend API
