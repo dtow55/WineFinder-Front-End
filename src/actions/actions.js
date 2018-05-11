@@ -50,6 +50,6 @@ export function submitWine(formContent) {
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify({wine: formContent})})
       .then(response => response.json())
-      .then(wine => dispatch({ type: '', wine: wine }));
+      .then(wine => dispatch({ type: 'SUBMIT_WINE', wine: wine }));
   }
 }
