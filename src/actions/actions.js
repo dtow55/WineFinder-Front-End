@@ -1,3 +1,10 @@
+//Currently unused
+export function loadWinesFromStore(wines) {
+  return (dispatch) => {
+    dispatch({ type: 'FETCH_WINES', wines: wines });
+  }
+} 
+
 // ***ASYNC ACTIONS***
 
 //Loads the index of all wines in JSON format from backend API
