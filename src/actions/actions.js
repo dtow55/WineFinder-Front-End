@@ -1,3 +1,5 @@
+// ***ASYNC ACTIONS***
+
 //Loads the index of all wines in JSON format from backend API
 export function loadWines() {
   return (dispatch) => {
