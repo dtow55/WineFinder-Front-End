@@ -49,7 +49,7 @@ export function submitWine(formContent) {
       method: 'POST', 
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify({wine: formContent})})
-      .then(response => response.json())
+      .then(response => response.json())  //The backend must be redirecting to a wines/:id.json show page for this to work
       .then(wine => dispatch({ type: 'SUBMIT_WINE', wine: wine }));
   }
 }
