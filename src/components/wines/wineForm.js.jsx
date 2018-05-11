@@ -25,8 +25,6 @@ class WineForm extends Component {
   onSubmitHandler = (event) => {
     event.preventDefault();
 
-    //fetch(`http://localhost:4000/wines`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({wine: this.state})})
-    //debugger;
     this.props.submitWine(this.state);
   }
 
@@ -53,5 +51,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(null, mapDispatchToProps)(WineForm)
-
-//export default WineForm;
