@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ListGroupItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Wine = ({ wine }) => {
   return (
     //<ListGroupItem href={`/wines/${wine.id}`} > 
-    <ListGroupItem> 
-      <Link to={`/wines/${wine.id}`}>{wine.print}</Link>
-    </ListGroupItem>
+    <LinkContainer to={`/wines/${wine.id}`}>
+      <ListGroupItem> 
+        {wine.print}
+      </ListGroupItem>
+    </LinkContainer>
   )
 }
 
