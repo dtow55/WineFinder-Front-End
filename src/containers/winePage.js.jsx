@@ -7,9 +7,11 @@ import StoreList from '../components/stores/storeList.js.jsx';
 
 class WinePage extends Component {
 
+  /*
   componentDidMount() {
     this.props.loadWine(this.props.wineId);
   }
+  */
 
   render(props) {
     const wine = this.props.wine;
@@ -33,6 +35,22 @@ class WinePage extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  //debugger;
+  const wine = state.wines.find(wine => wine.id === ownProps.match.params.wineId)
+
+  if (wine) {
+    return { wine: wine } 
+  } else {
+    return { wine: {} }
+  }
+}
+
+export default connect(mapStateToProps)(WinePage);
+
+/* This code (along with componentDidMount() above) allows WinePage to query the 
+    API and load information on a single wine based on the URL. 
+
+const mapStateToProps = (state, ownProps) => {
   return {
     wineId: ownProps.match.params.wineId, 
     wine: state.wines
@@ -46,3 +64,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(WinePage);
+*/
