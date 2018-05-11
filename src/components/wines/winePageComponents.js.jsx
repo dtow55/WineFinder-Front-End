@@ -17,11 +17,11 @@ export const WineComments = ({ comments }) => {
   if (comments) {
     
     const commentsHTML = comments.map((comment, index) => {
-      return <li>"{comment.content}"</li>
+      return <li key={index}>"{comment.content}"</li>
     });
     
     return (
-      <ul class="list-unstyled">
+      <ul className="list-unstyled">
         {commentsHTML}
       </ul>
     )
