@@ -37,3 +37,15 @@ export function loadStore(storeId) {
       .then(store => dispatch({ type: 'FETCH_STORE', store: store }));
   }
 }
+
+export function submitWine() {
+  return (dispatch) => {
+    dispatch({ type: 'SUBMITING_WINE' });
+    return fetch(`http://localhost:4000/wines`, {
+      method: 'POST', 
+      headers: {'Content-Type': 'application/json'}, 
+      body: JSON.stringify({wine: this.state})})
+      .then(response => response.json())
+      .then(wine => dispatch({  }));
+  }
+}

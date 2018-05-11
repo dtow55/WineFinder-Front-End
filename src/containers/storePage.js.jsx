@@ -12,14 +12,15 @@ class StorePage extends Component {
   }
 
   render(props) {
-    const store = this.props.store;
+    const store= this.props.store;
+    const {wines} = this.props.store;
 
     return (
       <div>
         <StoreInfo store={store} />
 
         <h3>Wines at this Store: </h3>
-          <WineList wines={store.wines} />
+          <WineList wines={wines} />
       </div>
     )
   }
