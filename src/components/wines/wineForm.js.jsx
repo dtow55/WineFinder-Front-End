@@ -25,8 +25,6 @@ class WineForm extends Component {
   onSubmitHandler = (event) => {
     event.preventDefault();
 
-    //POST method sends stringified-JSON in the body, and a header that specifies
-    //that the body is in JSON format rather than the regular serialized format
     //fetch(`http://localhost:4000/wines`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({wine: this.state})})
     //debugger;
     this.props.submitWine(this.state);

@@ -43,7 +43,8 @@ export function loadStore(storeId) {
 export function submitWine(formContent) {
   return (dispatch) => {
     dispatch({ type: 'SUBMITING_WINE' });
-    //debugger;
+    //POST method sends stringified-JSON in the body, and a header that specifies
+    //that the body is in JSON format rather than the regular serialized format
     return fetch(`http://localhost:4000/wines`, {
       method: 'POST', 
       headers: {'Content-Type': 'application/json'}, 
