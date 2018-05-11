@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { submitWine } from '../../actions/actions';
 
 class WineForm extends Component {
   constructor(props) {
@@ -24,7 +27,9 @@ class WineForm extends Component {
 
     //POST method sends stringified-JSON in the body, and a header that specifies
     //that the body is in JSON format rather than the regular serialized format
-    fetch(`http://localhost:4000/wines`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({wine: this.state})})
+    //fetch(`http://localhost:4000/wines`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({wine: this.state})})
+    //debugger;
+    this.props.submitWine(this.state);
   }
 
   render() {
@@ -43,4 +48,12 @@ class WineForm extends Component {
   }
 }
 
-export default WineForm;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    submitWine: submitWine
+  }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(WineForm)
+
+//export default WineForm;

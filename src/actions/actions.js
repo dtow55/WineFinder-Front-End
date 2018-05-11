@@ -38,14 +38,17 @@ export function loadStore(storeId) {
   }
 }
 
-export function submitWine() {
+//Submits a new wine form to backend CREATE route and adds the response
+//...(a new wine) to state
+export function submitWine(formContent) {
   return (dispatch) => {
     dispatch({ type: 'SUBMITING_WINE' });
+    //debugger;
     return fetch(`http://localhost:4000/wines`, {
       method: 'POST', 
       headers: {'Content-Type': 'application/json'}, 
-      body: JSON.stringify({wine: this.state})})
+      body: JSON.stringify({wine: formContent})})
       .then(response => response.json())
-      .then(wine => dispatch({  }));
+      .then(wine => dispatch({ type: '', wine: wine }));
   }
 }
