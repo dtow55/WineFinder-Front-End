@@ -4,9 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 A single-page front end React UI for Wine Finder (https://github.com/dtow55/WineFinder-Project)
 
 ## Installation
+-Fork and clone
 
--sdf
--something sle
+-
 
 ## Contributors
 Please file any issues with a pull request
